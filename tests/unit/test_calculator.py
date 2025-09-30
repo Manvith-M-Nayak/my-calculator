@@ -18,6 +18,28 @@ class TestBasicOperations:
         assert subtract(5, 3) == 2
         assert subtract(10, 4) == 6
 
+    def test_add_negative_numbers(self):
+        """Test adding negative numbers"""
+        # -2 + -3 = -5
+        assert add(-2, -3) == -5
+        # -10 + -15 = -25
+        assert add(-10, -15) == -25
+        # -5 + 3 = -2 (mix of negative and positive)
+        assert add(-5, 3) == -2
+        # 5 + -3 = 2 (positive plus negative)
+        assert add(5, -3) == 2
+
+    def test_subtract_negative_numbers(self):
+        """Test subtracting negative numbers"""
+        # -5 - -3 = -2 (subtracting a negative is like adding)
+        assert subtract(-5, -3) == -2
+        # -10 - -15 = 5
+        assert subtract(-10, -15) == 5
+        # 5 - -3 = 8 (positive minus negative)
+        assert subtract(5, -3) == 8
+        # -5 - 3 = -8 (negative minus positive)
+        assert subtract(-5, 3) == -8
+
 class TestMultiplyDivideWithValidation:
     """Test multiplication and division with input validation."""
     
